@@ -31,12 +31,9 @@ const Footer = () => {
                     <ThemeToggle />
                 </div>
                 <p className='py-3 font-bold'>Sign Up to find out more</p>             
-                    <form className='flex'>
-                        <input type='text' className='w-40 md:w-52 bg-primary shadow-xl border rounded-2xl p-2' placeholder='Enter your Email'/>
-                        <Link to={"/signUp"} className='w-16 md:w-full'>
-                            <button className='h-full w-full bg-button text-btnText px-2 rounded-2xl'>Sign Up</button>
-                        </Link>
-                    </form>
+                        <Link to={"/signUp"} className='md:w-full'>
+                            <button className='bg-button text-btnText p-2 rounded-2xl'>Sign Up</button>
+                        </Link>           
             </div>
         </div>
     </div>

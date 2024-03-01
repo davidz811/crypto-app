@@ -74,15 +74,16 @@ const Navbar = () => {
                 )}
                 
                 {/* mobile icons */}
-                <div className='md:hidden cursor-pointer' onClick={handleToggle}>
+                <div className='md:hidden z-10 cursor-pointer' onClick={handleToggle}>
                     {!toggle ? <FaBars /> : <FaTimes />}
                 </div>
             </div>
+            
             {/* mobile menu */}
             {isMobile &&
             <div>
                 {toggle ? (
-                <ul className='flex flex-col items-center h-screen justify-center duration-300'>
+                <ul className='absolute top-0 bg-slate-100 left-0 w-full h-screen flex flex-col justify-center items-center duration-300'>
                     <li className='py-6'>
                         <Link to='/' className='font-bold' onClick={handleToggle}>
                             Home
