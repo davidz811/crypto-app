@@ -31,9 +31,9 @@ const Footer = () => {
                     <ThemeToggle />
                 </div>
                 <p className='py-3 font-bold'>Sign Up to find out more</p>             
-                        <Link to={"/signUp"} className='md:w-full'>
-                            <button className='bg-button text-btnText p-2 rounded-2xl'>Sign Up</button>
-                        </Link>           
+                    <Link to={"/signUp"} className='md:w-full'>
+                        <button className='bg-button text-btnText p-2 rounded-2xl'>Sign Up</button>
+                    </Link>           
             </div>
         </div>
     </div>

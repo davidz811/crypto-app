@@ -91,7 +91,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <Link to='/account' className='font-bold' onClick={handleToggle}>
-                            Account
+                            {user?.email ? <p>Account</p> : ''}
                         </Link>
                     </li>
                     <li className='py-6'>
@@ -99,13 +99,23 @@ const Navbar = () => {
                             <ThemeToggle />
                         </div>
                     </li>
-                    <li className='font-bold max-w-[240px] w-full flex justify-between py-5'>
-                        <Link to='/signIn' className='text-lg' onClick={handleToggle}>
-                            Sign In
-                        </Link>
-                        <Link to='/signUp' className='text-white bg-blue-400 px-3 py-1 ml-2 rounded-lg text-lg' onClick={handleToggle}>
-                            Sign Up
-                        </Link>
+                    <li className='font-bold max-w-[240px] w-full flex justify-center py-5'>
+                        {user?.email ? (
+                            <div>
+                                <Link to='/'>
+                                    <button onClick={handleSignOut}>Sign Out</button>
+                                </Link> 
+                            </div>
+                            ): (
+                            <div>
+                                <Link to='/signIn' className='text-lg' onClick={handleToggle}>
+                                    Sign In
+                                </Link>
+                                <Link to='/signUp' className='text-white bg-blue-400 px-3 py-1 ml-10 rounded-lg text-lg' onClick={handleToggle}>
+                                    Sign Up
+                                </Link>
+                            </div>
+                        )}
                     </li>
                 </ul>
                 ) : ''}
